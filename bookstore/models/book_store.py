@@ -11,4 +11,6 @@ class Book(models.Model):
     selling_price = fields.Float("Selling Price", readonly = False)
     year = fields.Integer("Year", required = True)
     description  = fields.Text("Description")
-    
+    isbn_code = fields.Integer("ISBN code")
+    author_ids = fields.Many2many("bookstore.author", "full_name", "Author" )
+    book_type_id = fields.Many2one("bookstore.book.type", string="Book Type")

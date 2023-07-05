@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <record id="book_store_action" model="ir.actions.act_window">
+        <field name="name">Book Store</field>
+        <field name="res_model">bookstore.book</field>
+        <field name="view_mode">tree,form,search</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Records Found. Let's create one!!
+            </p>
+            <p>
+                There is no records for the estate property.
+                so you can create new one if you want to sell.
+            </p>
+        </field>
+    </record>
+</odoo>
