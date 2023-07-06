@@ -10,6 +10,8 @@
     'data' : [
        'security/ir.model.access.csv',
        'views/book_view.xml',
-       'views/book_menus.xml'
+       'views/book_type_view.xml',
+       'views/author_view.xml',
+       'views/book_menus.xml',
     ]
 }

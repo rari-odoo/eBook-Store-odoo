@@ -6,4 +6,7 @@
             <menuitem id="menu_pro" name="book" action="book_store_action" />
         </menuitem>
     </menuitem>
+    <menuitem id="menu_setting" name="Settings" parent="first_level_menu" />
+    <menuitem id="menu_pro_type" name="Book Types" parent="menu_setting" action="book_type_action" />
+    <!-- <menuitem id="menu_pro_tag" name="Property Tags" parent="menu_setting" action="estate_property_tag_action" /> -->
 </odoo>

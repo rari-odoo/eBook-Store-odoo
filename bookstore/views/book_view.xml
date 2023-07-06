@@ -10,9 +10,59 @@
                 No Records Found. Let's create one!!
             </p>
             <p>
-                There is no records for the estate property.
+                There is no records for the book store.
                 so you can create new one if you want to sell.
             </p>
         </field>
     </record>
+    <record id="book_view_tree" model="ir.ui.view">
+       <field name="name">book.view.tree</field>
+       <field name="model">bookstore.book</field>
+       <field name="arch" type="xml">
+         <tree string="">
+           <field name="name" />
+           <field name="isbn_code" />
+           <field name="book_type_id" />
+           <field name="description" />
+           <field name="year" />
+           <field name="author_id" />
+         </tree>
+       </field>
+    </record>
+
+    <record id="book_view_form" model="ir.ui.view">
+        <field name="name">book.view.form</field>
+        <field name="model">bookstore.book</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                        </group>
+                    </group>
+                    <group>
+                    <group>
+                          <field name="book_type_id" />
+                          <field name="isbn_code" />
+                    </group>
+                     
+                     <group>
+                            <field name="expceted_price" />
+                            <field name="selling_price" />
+                        </group>
+                    </group>
+                    <notebook>
+                    <page string="Description">
+                      <field name="description" />
+                      <group>
+                        <field name="author_id" />
+                        <field name="year" />
+                      </group>
+                    </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>    
 </odoo>

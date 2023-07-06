@@ -1,16 +1,23 @@
 <?xml version="1.0"?>
 
 <odoo>
-    <record id="estate_property_offer_view_form" model="ir.ui.view">
+    <!-- <record id="author_view_tree" model="ir.ui.view">
+       <field name="name">author.view.tree</field>
+       <field name="model">bookstore.author</field>
+       <field name="arch" type="xml">
+        <tree string="">
+           <field name="full_name" />
+        </tree>
+       </field>
+    </record> -->
+    <record id="author_view_form" model="ir.ui.view">
          <field name="name">author.view.form</field>
          <field name="model">bookstore.author</field>
          <field name="arch" type="xml">
            <form>
              <sheet>
               <group>
-                <field name="first_name" />
-                <field name="last_name" />
-                <field name="full_name"/>
+                <field name="name"/>
               </group>
              </sheet>
            </form>
