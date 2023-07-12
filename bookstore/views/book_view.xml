@@ -50,12 +50,14 @@
                      <group>
                             <field name="expceted_price" />
                             <field name="selling_price" />
+                            <field name="publish_id" />
                         </group>
                     </group>
                     <notebook>
                     <page string="Description">
                       <field name="description" />
                       <group>
+                        <field name="state" />
                         <field name="author_id" />
                         <field name="year" />
                       </group>

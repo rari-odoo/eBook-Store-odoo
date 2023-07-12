@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="book_publish_action" model="ir.actions.act_window">
+        <field name="name">Publishers</field>
+        <field name="res_model">bookstore.publish</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Records Found. Let's create one!!
+            </p>
+            <p>
+                There is no records for the book store.
+                so you can create new one if you want to sell.
+            </p>
+        </field>
+    </record>
+
+    <record id="book_publish_view_form" model="ir.ui.view">
+        <field name="name">publish.view.tree</field>
+        <field name="model">bookstore.publish</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+                <field name="country" />
+            </tree>
+        </field>
+    </record>
+    
+    <record id="book_publish_view_form" model="ir.ui.view" > 
+        <field name="name">publish.view.form</field>
+        <field name="model">bookstore.publish</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                        <field name="name" />
+                        </group>
+                        <group>
+                        <field name="publish_date" />
+                        <field name="country" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Books">
+                          <!-- <field name="description" /> -->
+                          <field name="book_ids">
+                          <tree>
+                             <field name="name" />
+                             <field name="author_id"/>
+                             <field name="state"/>
+                          </tree>
+                        </field>
+                        </page>
+                        </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

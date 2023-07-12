@@ -3,10 +3,15 @@
 <odoo>
     <menuitem id="first_level_menu" name="Book Store">
         <menuitem id="menu_finance_receivables" name="Books">
-            <menuitem id="menu_pro" name="book" action="book_store_action" />
+            <menuitem id="menu_pro" name="Books" action="book_store_action" />
+            <!-- <menuitem id="author_pro" name="Authors" action="author_action" /> -->
         </menuitem>
     </menuitem>
-    <menuitem id="menu_setting" name="Settings" parent="first_level_menu" />
+    
+    <menuitem id="menu_pro_member" name="Members" parent="first_level_menu" /> 
+    <menuitem id="author_pro" name="Authors" parent="menu_pro_member" action="author_action" />
+    <menuitem id="publish_pro" name="Publisher" parent="menu_pro_member" action="book_publish_action" />
+
+    <menuitem id="menu_setting" name="Categories" parent="first_level_menu" />
     <menuitem id="menu_pro_type" name="Book Types" parent="menu_setting" action="book_type_action" />
-    <!-- <menuitem id="menu_pro_tag" name="Property Tags" parent="menu_setting" action="estate_property_tag_action" /> -->
 </odoo>
