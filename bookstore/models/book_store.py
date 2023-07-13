@@ -13,6 +13,7 @@ class Book(models.Model):
     description  = fields.Text("Description")
     email = fields.Char("Email")
     contact_no = fields.Integer("Contact Number")
+    edition = fields.Char("Edition")
     isbn_code = fields.Integer("ISBN code")
     state = fields.Selection([('publish','Publish'),('unpublish','Unpublish')], string="Status")
     publish_id = fields.Many2one("bookstore.publish", "Publisher")

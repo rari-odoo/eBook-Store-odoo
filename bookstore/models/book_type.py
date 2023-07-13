@@ -6,5 +6,6 @@ class BookType(models.Model):
      _log_access = False
      Active = False
 
-     name = fields.Char("Type" , required=True)
+     name = fields.Char("Categotry Name" , readonly=True)
+     book_type = fields.Char("Book Type", required=True)
      book_ids = fields.One2many("bookstore.book" , "book_type_id" ,string="Types")

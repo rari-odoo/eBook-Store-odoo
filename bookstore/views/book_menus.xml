@@ -12,6 +12,7 @@
     <menuitem id="author_pro" name="Authors" parent="menu_pro_member" action="author_action" />
     <menuitem id="publish_pro" name="Publisher" parent="menu_pro_member" action="book_publish_action" />
 
-    <menuitem id="menu_setting" name="Categories" parent="first_level_menu" />
+    <menuitem id="menu_setting" name="Configuration" parent="first_level_menu" />
+    <menuitem id="menu_pro_policy" name="Policies" parent="menu_setting" action="book_policy_action" />
     <menuitem id="menu_pro_type" name="Book Types" parent="menu_setting" action="book_type_action" />
 </odoo>
