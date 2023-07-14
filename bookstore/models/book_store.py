@@ -15,8 +15,14 @@ class Book(models.Model):
     contact_no = fields.Integer("Contact Number")
     edition = fields.Char("Edition")
     isbn_code = fields.Integer("ISBN code")
+    termCon = fields.Char("Terms and Conditions")
     state = fields.Selection([('publish','Publish'),('unpublish','Unpublish')], string="Status")
     publish_id = fields.Many2one("bookstore.publish", "Publisher")
-    author_id = fields.Many2one("bookstore.author", string="Author" )
+    author_id = fields.Many2one("res.partner", string="Author" )
     book_type_id = fields.Many2one("bookstore.book.type",string="Book Type")
-    
+    available_book = fields.One2many("")
+
+    _sql_constraints = [
+        ('unique isbn code', 'UNIQUE(isbn_code)', "ISBN Code should be unique")
+    ]
+

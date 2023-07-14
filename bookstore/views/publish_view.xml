@@ -16,7 +16,7 @@
         </field>
     </record>
 
-    <record id="book_publish_view_form" model="ir.ui.view">
+    <record id="book_publish_view_tree" model="ir.ui.view">
         <field name="name">publish.view.tree</field>
         <field name="model">bookstore.publish</field>
         <field name="arch" type="xml">

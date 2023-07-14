@@ -9,6 +9,7 @@
 
     'data' : [
        'security/ir.model.access.csv',
+       'views/book_policy_view.xml',
        'views/publish_view.xml',
        'views/author_view.xml',
        'views/book_view.xml',

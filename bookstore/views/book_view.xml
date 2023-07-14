@@ -16,18 +16,18 @@
         </field>
     </record>
     <record id="book_view_tree" model="ir.ui.view">
-       <field name="name">book.view.tree</field>
-       <field name="model">bookstore.book</field>
-       <field name="arch" type="xml">
-         <tree string="">
-           <field name="name" />
-           <field name="isbn_code" />
-           <field name="book_type_id" />
-           <field name="description" />
-           <field name="year" />
-           <field name="author_id" />
-         </tree>
-       </field>
+        <field name="name">book.view.tree</field>
+        <field name="model">bookstore.book</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+                <field name="isbn_code" />
+                <field name="book_type_id" />
+                <field name="description" />
+                <field name="year" />
+                <field name="author_id" />
+            </tree>
+        </field>
     </record>
 
     <record id="book_view_form" model="ir.ui.view">
@@ -42,29 +42,44 @@
                         </group>
                     </group>
                     <group>
-                    <group>
-                          <field name="book_type_id" />
-                          <field name="isbn_code" />
-                    </group>
-                     
-                     <group>
+                        <group>
+                            <field name="book_type_id" attrs="{'required' : True}" />
+                            <field name="isbn_code" />
+                        </group>
+
+                        <group>
                             <field name="expceted_price" />
                             <field name="selling_price" />
                             <field name="publish_id" />
                         </group>
                     </group>
                     <notebook>
-                    <page string="Description">
-                      <field name="description" />
-                      <group>
-                        <field name="state" />
-                        <field name="author_id" />
-                        <field name="year" />
-                      </group>
-                    </page>
+                        <page string="Description">
+                            <field name="description" />
+                            <group>
+                                <field name="state" />
+                                <field name="author_id" attrs="{'required' : True}" />
+                                <field name="year" />
+                            </group>
+                        </page>
+                        <page string="Terms and Conditions">
+                            <tree string="" editable="top">
+                                <field name="termCon" />
+                            </tree>
+                        </page>
                     </notebook>
                 </sheet>
             </form>
         </field>
-    </record>    
+    </record>
+
+    <record id="book_search_view" model="ir.ui.view">
+        <field name="name">book.view.search</field>
+        <field name="model">bookstore.book</field>
+        <field name="arch" type="xml">
+            <seach string="Book Store">
+                <field  />
+            </seach>
+        </field>
+    </record>
 </odoo>

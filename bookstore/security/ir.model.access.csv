@@ -3,3 +3,5 @@ bookstore.access_bookstore_book,access_bookstore_book,bookstore.model_bookstore_
 bookstore.access_bookstore_book_type,access_bookstore_book_type,bookstore.model_bookstore_book_type,base.group_user,1,1,1,1
 bookstore.access_bookstore_author,access_bookstore_author,bookstore.model_bookstore_author,base.group_user,1,1,1,1
 bookstore.access_bookstore_publish,access_bookstore_publish,bookstore.model_bookstore_publish,base.group_user,1,1,1,1
+bookstore.access_bookstore_policy,access_bookstore_policy,bookstore.model_bookstore_policy,base.group_user,1,1,1,1
+bookstore.access_bookstore_bookstock,access_bookstore_bookstock,bookstore.model_bookstore_bookstock,base.group_user,1,1,1,1
