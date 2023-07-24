@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <odoo>
-    <menuitem id="first_level_menu" name="Book Store" web-icon="bookstore,static/description/download.png">
+    <menuitem id="first_level_menu" name="Book Store">
         <menuitem id="menu_finance_receivables" name="Books">
             <menuitem id="menu_pro" name="Books" action="book_store_action" />
             <!-- <menuitem id="author_pro" name="Authors" action="author_action" /> -->

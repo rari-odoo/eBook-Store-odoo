@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+      <data noupdate="1">
+        <record id="boo_store_data" model="bookstore.book">
+            <field name="name">You can win</field>
+            <field name="state">n</field>
+            <field name="description">A motivational book</field>
+            <field name="expected_price">1600000</field>
+            <field name="email">riti@gmail.com</field>
+            <field name="contact_no">9887766544</field>
+          </record>
+
+          <!-- <record id="estate_property_data1" model="bookstore.book">
+            <field name="name">Taj Hotel</field>
+            <field name="state">C</field>
+            <field name="description">A nice Hotel</field>
+            <field name="postcode">12645</field>
+            <field name="date_availibilty">2021-05-02</field>
+            <field name="expected_price">120000</field>
+            <field name="bedroom">1</field>
+            <field name="living_area">10</field>
+            <field name="facades">4</field>
+            <field name="garage">False</field>
+            <field name="garden">True</field>
+             <field name="garden_area">100000</field>
+             <field name="garden_orientation">South</field> 
+             <field name="property_type_id" ref="estate.estate_property_type_data2" />
+                  <field name="tag_ids" eval="[ref(estate_property_tag_data1), ref(estate_property_tag_data3)]" />
+            </record>
+      
+            <record id="estate_property_data2" model="bookstore.book">
+              <field name="name">International Space Station</field>
+              <field name="state">N</field>
+              <field name="description">Aliens sometimes come visit</field>
+              <field name="postcode">1234</field>
+              <field name="date_availibilty">2030-12-31</field>
+              <field name="expected_price">45890000</field>
+              <field name="property_type_id" ref="estate_property_type_data2"/>
+              <field name="user_id" ref="base.user_admin"/>
+          </record>
+      
+          <record id="estate_property_data3" model="bookstore.book">
+              <field name="name">Cozy Cabin</field>
+              <field name="state">S</field>
+              <field name="description">Small cabin by lake</field>
+              <field name="postcode">10000</field>
+              <field name="date_availibilty">2020-01-01</field>
+              <field name="expected_price">80000</field>
+              <field name="bedroom">1</field>
+              <field name="living_area">10</field>
+              <field name="facades">4</field>
+              <field name="garage">False</field>
+              <field name="garden">True</field>
+              <field name="property_type_id" ref="estate_property_type_data4"/>
+              <field name="user_id" ref="base.user_admin"/>
+            </record> -->
+      </data>
+</odoo>

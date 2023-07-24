@@ -11,3 +11,5 @@ class PublishBook(models.Model):
     publish_date = fields.Date("Publish Date", copy=False)
     country = fields.Char("Country of origin")
     book_ids = fields.One2many("bookstore.book", "publish_id", string="Books")
+
+    

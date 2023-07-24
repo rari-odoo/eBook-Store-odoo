@@ -26,6 +26,10 @@
                 <field name="description" />
                 <field name="year" />
                 <field name="author_id" />
+                <field name="expected_price" optional="hide"/>
+                <field name="email" optional="hide" />
+                <field name="contact_no" optional="hide" />
+                <field name="edition" />
             </tree>
         </field>
     </record>
@@ -35,6 +39,14 @@
         <field name="model">bookstore.book</field>
         <field name="arch" type="xml">
             <form string="">
+                <header>
+                    <!-- <button name="action_sold" type="object" string="Sold" states="N,OR" />
+                    <button name="action_sold" type="object" string="Sold" states="OA"
+                        class="oe_highlight" />
+                    <button name="action_cancel" type="object" string="Cancel" states="N,OR,OA" /> -->
+                    <field name="state" widget="statusbar" class="o_field_statusbar"
+                        options="{'clickable': '1'}" />
+                </header>
                 <sheet>
                     <group>
                         <group>
@@ -43,14 +55,17 @@
                     </group>
                     <group>
                         <group>
-                            <field name="book_type_id" attrs="{'required' : True}" />
+                            <field name="book_type_id" />
                             <field name="isbn_code" />
+                            <field name="email" optional="hide" />
+                            <field name="contact_no" optional="hide" />
                         </group>
 
                         <group>
-                            <field name="expceted_price" />
+                            <field name="expected_price" />
                             <field name="selling_price" />
                             <field name="publish_id" />
+                            <field name="edition" />
                         </group>
                     </group>
                     <notebook>
@@ -63,9 +78,7 @@
                             </group>
                         </page>
                         <page string="Terms and Conditions">
-                            <tree string="" editable="top">
-                                <field name="termCon" />
-                            </tree>
+                            <field name="termCon" title="Terms And Conditions"/>
                         </page>
                     </notebook>
                 </sheet>
@@ -73,7 +86,7 @@
         </field>
     </record>
 
-    <record id="book_search_view" model="ir.ui.view">
+    <!-- <record id="book_search_view" model="ir.ui.view">
         <field name="name">book.view.search</field>
         <field name="model">bookstore.book</field>
         <field name="arch" type="xml">
@@ -81,5 +94,5 @@
                 <field  />
             </seach>
         </field>
-    </record>
+    </record> -->
 </odoo>

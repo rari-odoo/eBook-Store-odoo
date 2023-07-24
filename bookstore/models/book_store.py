@@ -7,7 +7,7 @@ class Book(models.Model):
 
 
     name = fields.Char("Book Title", required=True)
-    expceted_price = fields.Float("Expected Price", required=True)
+    expected_price = fields.Float("Expected Price", required=True)
     selling_price = fields.Float("Selling Price", readonly = False)
     year = fields.Date("Year", required = True )
     description  = fields.Text("Description")
@@ -16,14 +16,14 @@ class Book(models.Model):
     edition = fields.Char("Edition")
     isbn_code = fields.Integer("ISBN code")
     termCon = fields.Char("Terms and Conditions")
-    state = fields.Selection([('publish','Publish'),('unpublish','Unpublish')], string="Status")
-    publish_id = fields.Many2one("bookstore.publish", "Publisher")
-    author_id = fields.Many2one("bookstore.author", string="Author" )
+    state = fields.Selection([('n','New'),('a','Available'),('not', 'Not Available'),('s',"sold")], string="Status")
+    publish_id = fields.Many2one("res.partner",  "Publisher")
+    author_id = fields.Many2one("res.partner" ,string="Author", required=True )
     book_type_id = fields.Many2one("bookstore.book.type",string="Book Type")
     tag_ids = fields.Many2many("bookstore.tag", "Tags")
     #available_book = fields.One2many("")
 
     # _sql_constraints = [
-    #     ('unique isbn code', 'UNIQUE(isbn_code)', "ISBN Code should be unique")
+    #     ('unique ', 'UNIQUE(author_id)', "Author should be unique")
     # ]
 

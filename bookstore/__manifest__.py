@@ -15,5 +15,9 @@
        'views/book_view.xml',
        'views/book_type_view.xml',
        'views/book_menus.xml',
+    ],
+
+    'demo' : [
+         'demo/demo_data.xml',
     ]
 }

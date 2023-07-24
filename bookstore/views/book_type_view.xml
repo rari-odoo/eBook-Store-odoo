@@ -16,18 +16,28 @@
         </field>
     </record>
 
-    <record id="estate_property_type_view_form" model="ir.ui.view">
+    <record id="book_store_type_view_tree" model="ir.ui.view">
+        <field name="name">booktype.view.tree</field>
+        <field name="model">bookstore.book.type</field>
+        <field name="arch" type="xml">
+            <tree string="Book Types">
+                <field name="book_type" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="book_store_type_view_form" model="ir.ui.view">
         <field name="name">booktype.view.form</field>
         <field name="model">bookstore.book.type</field>
         <field name="arch" type="xml">
-            <form string="Property Types">
+            <form string="Book Types">
                 <sheet>
                     <group>
                         <field name="name" />
+                        <field name="book_type" />
                     </group>
                 </sheet>
             </form>
         </field>
-
     </record>
 </odoo>
