@@ -26,8 +26,8 @@
             </tree>
         </field>
     </record>
-    
-    <record id="book_publish_view_form" model="ir.ui.view" > 
+
+    <record id="book_publish_view_form" model="ir.ui.view">
         <field name="name">publish.view.form</field>
         <field name="model">bookstore.publish</field>
         <field name="arch" type="xml">
@@ -35,25 +35,25 @@
                 <sheet>
                     <group>
                         <group>
-                        <field name="name" />
+                            <field name="name" />
                         </group>
                         <group>
-                        <field name="publish_date" />
-                        <field name="country" />
+                            <field name="publish_date" />
+                            <field name="country" />
                         </group>
                     </group>
                     <notebook>
                         <page string="Books">
-                          <!-- <field name="description" /> -->
-                          <field name="book_ids">
-                          <tree>
-                             <field name="name" />
-                             <field name="author_id"/>
-                             <field name="state"/>
-                          </tree>
-                        </field>
+                            <!-- <field name="description" /> -->
+                            <field name="book_ids">
+                                <tree>
+                                    <field name="name" />
+                                    <field name="author_id" />
+                                    <field name="p_not" />
+                                </tree>
+                            </field>
                         </page>
-                        </notebook>
+                    </notebook>
                 </sheet>
             </form>
         </field>

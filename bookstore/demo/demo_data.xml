@@ -7,8 +7,9 @@
             <field name="state">n</field>
             <field name="description">A motivational book</field>
             <field name="expected_price">1600000</field>
-            <field name="email">riti@gmail.com</field>
-            <field name="contact_no">9887766544</field>
+            <field name="author_email">riti@gmail.com</field>
+            <field name="contact_no">98877544</field>
+            <field name="author_id" ref="base.res_partner_2" />
           </record>
 
           <!-- <record id="estate_property_data1" model="bookstore.book">

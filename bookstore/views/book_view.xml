@@ -20,15 +20,17 @@
         <field name="model">bookstore.book</field>
         <field name="arch" type="xml">
             <tree string="">
+                <field name="sequence" widget="handle"/>
                 <field name="name" />
                 <field name="isbn_code" />
                 <field name="book_type_id" />
                 <field name="description" />
-                <field name="year" />
+                <field name="date" />
                 <field name="author_id" />
                 <field name="expected_price" optional="hide"/>
-                <field name="email" optional="hide" />
-                <field name="contact_no" optional="hide" />
+                <field name="p_not" optional="hide" />
+                <field name="author_email" widget="email" optional="hide" />
+                <field name="contact_no" widget="phone" optional="hide" />
                 <field name="edition" />
             </tree>
         </field>
@@ -55,10 +57,12 @@
                     </group>
                     <group>
                         <group>
+                            
                             <field name="book_type_id" />
+                    
                             <field name="isbn_code" />
-                            <field name="email" optional="hide" />
-                            <field name="contact_no" optional="hide" />
+                            <field name="author_email" attrs = "{'readonly' : False}" widget="email" />
+                            <field name="contact_no" widget="phone" attrs="{'readonly' : False}" />
                         </group>
 
                         <group>
@@ -72,16 +76,20 @@
                         <page string="Description">
                             <field name="description" />
                             <group>
-                                <field name="state" />
+                                <field name="p_not" />
                                 <field name="author_id" attrs="{'required' : True}" />
-                                <field name="year" />
+                                <field name="date" />
                             </group>
                         </page>
                         <page string="Terms and Conditions">
-                            <field name="termCon" title="Terms And Conditions"/>
+                            <field name="termCon" placeholder="Terms And Conditions" title="Terms And Conditions"/>
                         </page>
                     </notebook>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="message_ids" />
+                </div>
             </form>
         </field>
     </record>
